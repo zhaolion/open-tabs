@@ -1,0 +1,69 @@
+# <type>(<scope>): <subject>
+# |<----  Using a Maximum Of 50 Characters  ---->|
+
+# Explain why this change is being made
+# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+
+# Provide links or keys to any relevant tickets, articles or other resources
+# Example: Closes #123, Fixes #456
+
+# --- COMMIT MESSAGE FORMAT ---
+# <type>(<scope>): <subject>
+#
+# <body>
+#
+# <footer>
+#
+# --- TYPES ---
+# feat:     A new feature
+# fix:      A bug fix
+# docs:     Documentation only changes
+# style:    Changes that don't affect code meaning (formatting, etc.)
+# refactor: Code change that neither fixes a bug nor adds a feature
+# perf:     Code change that improves performance
+# test:     Adding missing tests or correcting existing tests
+# build:    Changes that affect the build system or dependencies
+# ci:       Changes to CI configuration files and scripts
+# chore:    Other changes that don't modify src or test files
+# revert:   Reverts a previous commit
+# infra:    Infrastructure related changes
+#
+# --- SCOPES (based on TabAPI architecture) ---
+# Core Layer:
+#   core, provider, adapter, router, client
+#
+# AI Infrastructure:
+#   cost, safety, observability, metrics, logging
+#
+# Agent Framework:
+#   agent, tool, memory, orchestration
+#
+# Context Engineering:
+#   prompt, template, rag, few-shot
+#
+# General:
+#   deps, config, tests, docs, ci
+#
+# --- EXAMPLES ---
+# feat(provider): add OpenAI adapter
+# fix(router): handle provider failover correctly
+# docs: update installation instructions
+# test(agent): add unit tests for memory system
+# refactor(core): simplify unified client API
+#
+# --- SUBJECT GUIDELINES ---
+# - Use imperative mood: "add" not "added" or "adds"
+# - Don't capitalize first letter
+# - No period (.) at the end
+# - Keep it under 50 characters
+#
+# --- BODY GUIDELINES ---
+# - Wrap at 72 characters
+# - Explain what and why, not how
+# - Can include multiple paragraphs
+#
+# --- FOOTER GUIDELINES ---
+# - Reference issues: "Closes #123", "Fixes #456"
+# - Note breaking changes: "BREAKING CHANGE: description"
+#
+# For more details, see: docs/develop.md

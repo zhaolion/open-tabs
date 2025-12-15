@@ -1,0 +1,65 @@
+# Gitlint configuration for TabAPI
+# See https://jorisroovers.com/gitlint/ for documentation
+
+[general]
+# Enable community contributed rules
+contrib=contrib-title-conventional-commits
+
+# Ignore certain rules for merge commits
+ignore-merge-commits=true
+ignore-revert-commits=true
+ignore-fixup-commits=true
+ignore-squash-commits=true
+
+# Ignore certain rules
+# B6 = body-is-missing (we allow commits without body)
+ignore=B6
+
+# Enable debug mode (set to true for troubleshooting)
+debug=false
+
+# [title-max-length]
+# Line length limit including body
+# Note: this is the rule for the first line of the commit message
+[title-max-length]
+line-length=200
+
+[title-min-length]
+min-length=10
+
+# Conventional Commits configuration
+[contrib-title-conventional-commits]
+# Specify allowed commit types
+types=feat,fix,docs,style,refactor,perf,test,build,ci,chore,revert,infra
+
+# Optionally define allowed scopes (leave empty to allow any scope)
+# Scopes based on TabAPI architecture
+# Core Layer: core, provider, adapter, router, client
+# AI Infrastructure: cost, safety, observability, metrics, logging
+# Agent Framework: agent, tool, memory, orchestration
+# Context Engineering: prompt, template, rag, few-shot
+# General: deps, config, tests, docs, ci
+# Leave empty to allow any scope
+# scopes=core,provider,adapter,router,client,cost,safety,observability,metrics,logging,agent,tool,memory,orchestration,prompt,template,rag,few-shot,deps,config,tests,docs,ci
+
+# [body-max-line-length]
+[body-max-line-length]
+line-length=1000
+
+# [body-min-length]
+# Disable body min length requirement (body is optional)
+[body-min-length]
+min-length=0
+
+# [ignore-by-title]
+# Ignore rules for commits with specific titles (regex)
+# Example: ignore all commits with "WIP" in the title
+# [ignore-by-title]
+# regex=^WIP
+# ignore=all
+
+# [ignore-by-body]
+# Ignore rules for commits with specific content in the body (regex)
+# [ignore-by-body]
+# regex=^Signed-off-by
+# ignore=all
