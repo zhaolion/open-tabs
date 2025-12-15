@@ -232,3 +232,4 @@ __marimo__/
 
 # tmp
 tmp/
+.DS_Store/
